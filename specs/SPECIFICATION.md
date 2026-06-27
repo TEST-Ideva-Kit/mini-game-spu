@@ -5,20 +5,9 @@
 **Status**: Draft
 **Input**: User description: "Project name: Mini Game - SPU"
 
-## User Scenarios & Testing *(mandatory)*
+## User Scenarios &amp; Testing *(mandatory)*
 
-<!--
-  IMPORTANT: User stories should be PRIORITIZED as user journeys ordered by importance.
-  Each user story/journey must be INDEPENDENTLY TESTABLE - meaning if you implement just ONE of them,
-  you should still have a viable MVP (Minimum Viable Product) that delivers value.
 
-  Assign priorities (P1, P2, P3, etc.) to each story, where P1 is the most critical.
-  Think of each story as a standalone slice of functionality that can be:
-  - Developed independently
-  - Tested independently
-  - Deployed independently
-  - Demonstrated to users independently
--->
 
 ### User Story 1 - Core Scoring and Combo Mechanic (Priority: P1)
 
@@ -78,10 +67,7 @@ The DJ Puff character features a 'Fever Bar' that fills as the player achieves '
 
 ## Requirements *(mandatory)*
 
-<!--
-  ACTION REQUIRED: The content in this section represents placeholders.
-  Fill them out with the right functional requirements.
--->
+
 
 ### Functional Requirements
 
@@ -109,10 +95,7 @@ The DJ Puff character features a 'Fever Bar' that fills as the player achieves '
 
 ## Success Criteria *(mandatory)*
 
-<!--
-  ACTION REQUIRED: Define measurable success criteria.
-  These must be technology-agnostic and measurable.
--->
+
 
 ### Measurable Outcomes
 
@@ -183,7 +166,7 @@ Gameplay mechanics and character abilities will be defined using clear, systemic
 **Last Amended Date:** 2026-06-27
 ### PRD.md
 
-🎮 GAME SPECIFICATION & PROJECT
+🎮 GAME SPECIFICATION &amp; PROJECT
 PROPOSAL
 
 PROJECT NAME: Music Mania (2026 Modernized Edition) STUDIO POSITIONING: Enterprise
@@ -201,32 +184,32 @@ secPerBeat = (60.0f / bpm)
 songPosition = (AudioSettings.dspTime - dspSongTime) - startDelay
 songPositionInBeats = (songPosition / secPerBeat)
 ● Quality Gate: ระบบ Parity Gate ของ Promptzone จะ ทํา การ รัน สค ริปต์ทดสอบ (Unit Test) บน Local Machine ของ นักศึกษา เพื่อตรวจ จับ อัตรา การ หลุด จังหวะ (Audio Drift) ก่อน อนุญาต ให้ Commit
-2. Sandbox Build & Deployment Specs
+2. Sandbox Build &amp; Deployment Specs
 ● Build Target: Unity 6 WebGL (Headless / Batchmode Build via Railway)
 ● Deployment Pipeline: เมื่อ Conductor Agent ส่ง สัญญาณ Socket จาก เครื่อง นักศึกษา แพลตฟอร์มจะ สั่ง รัน Docker Image บน Railway เพื่อ คอมไพล์โปรเจกต์เป็นไฟล์ Static Web แล้วผลัก ขึ้น Vercel เพื่อ นําลิงก์ มาฝัง บน Web UI ทันที
-🎭 มิติ ที่ 2: เมท ริก ซ์การ ออก แบบ ตัว ละคร และ ระบบสกิล (Character Design & Ability Specs)
+🎭 มิติ ที่ 2: เมท ริก ซ์การ ออก แบบ ตัว ละคร และ ระบบสกิล (Character Design &amp; Ability Specs)
 อ้างอิง จาก คลัง ตัว ละคร ดั้งเดิม ในไฟล์ Monomania_Musicmania_noDS.pdf เรา จะ แปลง ลักษณะ ทาง ศิลปะ (Artistic Persona) ให้ กลาย เป็น ตรรกะ เชิง ระบบ (Game Mechanics) เพื่อให้ AI และ นักศึกษา นํา ไป เขียน โปรแกรม ร่วม กับ ระบบ Event-Driven System ได้ อย่าง แม่นยํา :
 [BaseCharacter]
 │
 ┌───────────────────────┼───────────────────────┐
 ▼                       ▼                       ▼
 (Turntable Bee)          (Aqua Girl)             (DJ Puff)
-[Score Enhancer]       [Shield & Recovery]     [Mechanic Tweaker]
+[Score Enhancer]       [Shield &amp; Recovery]     [Mechanic Tweaker]
 
 1. Turntable Bee ( ตัว ต่อ สี เหลือง สวม หู ฟัง ดี เจ )
 ● สาย งาน : Score Enhancer ( สาย เน้น ทํา คะแนน ระดับ สูง )
 ● คํา อธิบาย พฤติกรรมสกิล (C# Data Structure):
 ○ ดัก จับ สถานะ ผ่าน อิน เทอร์เฟซ ICharacterAbility
-○ เมื่อ ตัวแปร currentCombo >= 50 ระบบ จะ เปิด ใช้ งาน สถานะ Overdrive
+○ เมื่อ ตัวแปร currentCombo &gt;= 50 ระบบ จะ เปิด ใช้ งาน สถานะ Overdrive
 ○ สูตร คํานวณ คะแนน : ใน ขณะ ที่ สถานะ นี้ ทํา งาน โน้ต ที่ กด ได้ Perfect จะ ถูก คํานวณ ใหม่ เป็น :
 NoteScore = 300 × 1.10 × (ComboMultiplier)
 ● Animation State Triggers: สั่ง งาน ผ่าน สค ริปต์ CharacterAnimationController ให้ เปลี่ยน สถานะ ใน Animator ไป ที่ ท ริกเกอร์ OnOverdriveActive เพื่อ เปิด เอฟ เฟกต์แสง ไฟ ดิสโก้รอบ ตัวละคร
 2. Aqua Girl ( ตัว ละคร ธาตุ นํ้า สี ฟ้า สวม แว่นโกเกิ้ล )
-● สาย งาน : Shield & Recovery ( สาย ป้องกัน สําหรับ ผู้ เล่น เริ่ม ต้น )
+● สาย งาน : Shield &amp; Recovery ( สาย ป้องกัน สําหรับ ผู้ เล่น เริ่ม ต้น )
 ● คํา อธิบาย พฤติกรรมสกิล (C# Data Structure):
 ○ กําหนด ตัวแปร int shieldCount = 3 เมื่อ เริ่ม ต้น เพลง
 ○ เมื่อ ระบบ PlayerInput.cs ส่ง สัญญาณ Event onNoteMiss ให้ ทํา การ ดัก จับ (Intercept) สัญญาณ ก่อน คลาส คํานวณ คะแนน หลัก จะ รับรู้
-○ เงื่อนไข : หาก shieldCount > 0 ให้ ทํา ลด ค่า shieldCount-- และ บังคับ ส่ง สถานะ หลอก (Fake State) เป็น Good แทน เพื่อรักษา เส้น สะสม Combo ของ ผู้ เล่น ไม่ ให้ กลาย เป็น 0
+○ เงื่อนไข : หาก shieldCount &gt; 0 ให้ ทํา ลด ค่า shieldCount-- และ บังคับ ส่ง สถานะ หลอก (Fake State) เป็น Good แทน เพื่อรักษา เส้น สะสม Combo ของ ผู้ เล่น ไม่ ให้ กลาย เป็น 0
 ● Animation State Triggers: เล่น อ นิ เม ชัน ท่า OnGuardShield พร้อม ทํา เอฟ เฟกต์ฟอง สบู่ แตก กระจาย บน จอ
 3. DJ Puff ( ตัว ละคร แปด แขน สี ส้ม สวม หน้ากาก แก๊ส ลําโพง )
 ● สาย งาน : Mechanic Tweaker ( สาย ปรับ แต่ง โครงสร้าง เกม เชิง เวลา )
@@ -235,7 +218,7 @@ NoteScore = 300 × 1.10 × (ComboMultiplier)
 ○ เมื่อ หลอด พลังงาน เต็ม ผู้ เล่น สามารถ กด ปุ่ม Spacebar เพื่อ เปิด ใช้ งาน Fever Mode เป็น เวลา 5 วินาที
 ○ พฤติกรรม เชิง ระบบ : ระบบ จะ เปลี่ยน ค่าตัว แปรก รอบ เวลา การก ด จังหวะ (Hit Window Offset) ใน สค ริปต์ PlayerInput.cs จาก เดิม 0.1s ขยาย เป็น 0.115s (+15%) ชั่วคราว เพื่อ เพิ่ม โอกาส การก ด Perfect ใน จังหวะ เพลงเร็ว
 ● Animation State Triggers: ท ริก เก อร์อ นิ เม ชัน ท่า FeverDance และ เปลี่ยน แถบ สี ของ ลู่ กด โน้ต ทั้ง 4 เลน เป็น สี ทอง สว่าง
-🗺 มิติ ที่ 3: ระบบ ด่าน และ กรอบ ความ ปลอดภัย (Level Design & Security Rules)
+🗺 มิติ ที่ 3: ระบบ ด่าน และ กรอบ ความ ปลอดภัย (Level Design &amp; Security Rules)
 ตัว เกม จะ ประกอบ ไป ด้วย 5 โซ น ตาม ภาพ แผนที่ โลก ต้นฉบับ ซึ่ง ระบบ Beatmap Recorder จะ ต้อง แปลง ผลลัพธ์ ออก มา เป็น โครงสร้าง ข้อมูล มาตรฐาน เพื่อ ส่ง ขึ้น ไป โฮสต์และ รี วิว บน หน้าเว็บ คอม มูนิตี้ของ Promptzone:
 1. โครงสร้าง ไฟล์ข้อมูล ด่าน (Beatmap JSON Schema)
 AI Worker และ สค ริปต์เขียน ไฟล์จะ ต้อง ส่ง ออก ข้อมูล สอดคล้อง ตาม โครงสร้าง นี้ เท่านั้น เพื่อ ผ่าน ด่าน Security Gate ( ตรวจ สอบ การ แฝง โค้ดอันตราย หรือ System Path หลุด รอด ):
@@ -252,19 +235,19 @@ AI Worker และ สค ริปต์เขียน ไฟล์จะ ต
 { "beat": 5.0, "lane": 3 }
 ]
 }
-2. Shift-Left Security & STRIDE Mapping
-● Spoofing & Tampering Protection: สค ริ ปต์ระบบ คะแนน และ การ ส่ง ข้อมูล Leaderboard ไป ยัง หน้าเว็บ จะ ต้อง วิ่ง ผ่าน กลไก การ เข้ารหัส Hash แบบ SHA-256 ผูก กับ รหัส นักศึกษา เพื่อป้องกัน ไม่ ให้ นักศึกษา แอบ ใช้ วิธี ส่ง ข้อมูล คะแนน ปลอม เข้า API เว็บก ลาง
+2. Shift-Left Security &amp; STRIDE Mapping
+● Spoofing &amp; Tampering Protection: สค ริ ปต์ระบบ คะแนน และ การ ส่ง ข้อมูล Leaderboard ไป ยัง หน้าเว็บ จะ ต้อง วิ่ง ผ่าน กลไก การ เข้ารหัส Hash แบบ SHA-256 ผูก กับ รหัส นักศึกษา เพื่อป้องกัน ไม่ ให้ นักศึกษา แอบ ใช้ วิธี ส่ง ข้อมูล คะแนน ปลอม เข้า API เว็บก ลาง
 🤖 มิติ ที่ 4: พิมพ์เขียว สั่ง การ ระบบ Multi-Agent AI (Promptzone Configuration)
 เพื่อให้ นักศึกษา ทํา งาน แบบ Strategic Architect (Agent Boss) ควบคุม AI ไม่ ให้ เกิด Spaghetti Code ให้ เรา เขียน ค่า กําหนด (Configurations) นี้ ตั้ง ไว้ บน แพลตฟอร์ม:
 promptzone_config:
 ai_tier_policy:
-cloud_platform_ai: "Stateless (Haiku-class) for Task breakdown & API routing"
+cloud_platform_ai: "Stateless (Haiku-class) for Task breakdown &amp; API routing"
 local_agent_ai: "Stateful (Claude-class) inside student machine via Conductor daemon"
 code_merge_policy:
 engine: "Hash-Anchored Edits Enabled"
 conflict_resolution: "Identify stable-line anchors before merging player/score/conductor branches"
 autonomy_dial:
-core_logic_scripts: "Suggest-Only (Requires student review & emoji confirmation)"
+core_logic_scripts: "Suggest-Only (Requires student review &amp; emoji confirmation)"
 ui_vfx_assets: "Semi-Autonomous (AI writes boilerplate, student tweaks parameters)"
 
 หน้าที่ บน บอร์ด งาน (Kanban Assignment Framework):
