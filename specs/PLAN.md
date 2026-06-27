@@ -15,7 +15,7 @@ This plan outlines the technical implementation for the "Mini Game - SPU" featur
 **Testing**: Unity Unit Tests, System Parity Gate for Audio Drift.
 **Target Platform**: Unity WebGL (Headless / Batchmode Build via Railway)
 **Project Type**: Game (Rhythm Game)
-**Performance Goals**: 60 fps, minimal audio drift (< 0.1s deviation), low latency input processing.
+**Performance Goals**: 60 fps, minimal audio drift (&lt; 0.1s deviation), low latency input processing.
 **Constraints**:
 *   Strict system rules for timing (avoid `Time.time` for critical calculations).
 *   Beatmap data must conform to a strict JSON Schema.
@@ -42,7 +42,7 @@ This plan details the technical implementation for the "Mini Game - SPU" feature
 **Testing**: Unit tests for core game logic, character abilities, and critically, the Audio-Clock Synchronizer for audio drift. Integration tests for beatmap loading and playback.
 **Target Platform**: Unity WebGL.
 **Project Type**: Game.
-**Performance Goals**: Smooth 60 FPS gameplay, minimal audio drift (< 10ms per minute or as defined by Unity best practices for audio sync).
+**Performance Goals**: Smooth 60 FPS gameplay, minimal audio drift (&lt; 10ms per minute or as defined by Unity best practices for audio sync).
 **Constraints**:
 *   Strict adherence to the Audio-Clock Synchronizer pattern, avoiding `Time.time` for note timing calculations.
 *   Implementation of SHA-256 hashing for score integrity.
@@ -56,9 +56,9 @@ This plan details the technical implementation for the "Mini Game - SPU" feature
 
 *   **I. Spec-Driven Development**: This plan is directly derived from `SPECIFICATION.md` and `PRD.md`. All subsequent development phases will follow the Spec Kit workflow. (Pass)
 *   **II. Robust Technical Architecture**: The plan incorporates the Audio-Clock Synchronizer pattern to ensure reliable synchronization, avoiding `Time.time`. Unity WebGL and a conceptual deployment pipeline align with the architecture requirements. (Pass)
-*   **III. Secure & Auditable Data**: The plan includes implementing SHA-256 hashing for score integrity and strict adherence to the Beatmap JSON Schema, as mandated. STRIDE threat modeling will be considered during implementation. (Pass)
+*   **III. Secure &amp; Auditable Data**: The plan includes implementing SHA-256 hashing for score integrity and strict adherence to the Beatmap JSON Schema, as mandated. STRIDE threat modeling will be considered during implementation. (Pass)
 *   **IV. Multi-Agent AI Collaboration**: The plan acknowledges AI roles (Orchestrator, VFX/UI Worker) for generating boilerplate code and assets, with human review as per `promptzone_config`. (Pass)
-*   **V. Structured Gameplay Mechanics & Assets**: Character abilities are planned as systemic data structures (`ICharacterAbility`) and integrated via animation triggers, aligning with the principle of structured mechanics. (Pass)
+*   **V. Structured Gameplay Mechanics &amp; Assets**: Character abilities are planned as systemic data structures (`ICharacterAbility`) and integrated via animation triggers, aligning with the principle of structured mechanics. (Pass)
 
 ## Project Structure
 
@@ -113,7 +113,7 @@ Assets/
 
 ## Complexity Tracking
 
-> **Fill ONLY if Constitution Check has violations that must be justified**
+&gt; **Fill ONLY if Constitution Check has violations that must be justified**
 
 | Violation | Why Needed | Simpler Alternative Rejected Because |
 |-----------|------------|-------------------------------------|
@@ -121,7 +121,7 @@ Assets/
 
 ## Phased Delivery Plan
 
-### Phase 0: Research & Setup (Approx. 1-2 days)
+### Phase 0: Research &amp; Setup (Approx. 1-2 days)
 
 *   **Objective**: Understand Unity's audio timing mechanisms, set up the Unity project, and establish the basic project structure.
 *   **Tasks**:
@@ -159,7 +159,7 @@ Assets/
 *   **Deliverables**: Characters selectable, abilities active and affecting gameplay as per spec.
 *   **Risks**: Complexity in managing state across multiple abilities and ensuring they interact correctly without conflicts.
 
-### Phase 3: Data Integrity & Security (Approx. 2-3 days)
+### Phase 3: Data Integrity &amp; Security (Approx. 2-3 days)
 
 *   **Objective**: Ensure data integrity and adherence to security requirements.
 *   **Tasks**:
@@ -170,7 +170,7 @@ Assets/
 *   **Deliverables**: Functional score hashing mechanism, validated beatmap loading.
 *   **Risks**: Overlooking edge cases in hashing or schema validation.
 
-### Phase 4: AI Integration & Refinement (Approx. 3-5 days)
+### Phase 4: AI Integration &amp; Refinement (Approx. 3-5 days)
 
 *   **Objective**: Integrate AI-generated components (if any) and refine UI/VFX.
 *   **Tasks**:
@@ -181,7 +181,7 @@ Assets/
 *   **Deliverables**: Integrated AI components, polished UI/VFX for abilities.
 *   **Risks**: AI-generated code may require significant refactoring or may not meet quality standards.
 
-### Phase 5: Testing & Deployment (Approx. 3-4 days)
+### Phase 5: Testing &amp; Deployment (Approx. 3-4 days)
 
 *   **Objective**: Ensure quality through testing and prepare for deployment.
 *   **Tasks**:
@@ -204,7 +204,7 @@ Assets/
 *   **AI-Generated Code Quality**:
     *   **Risk**: AI may produce suboptimal, incorrect, or hard-to-maintain code/assets.
     *   **Mitigation**: Adhere to `promptzone_config`'s "Suggest-Only" and review policies. Implement linters and static analysis tools where possible. Allocate sufficient time for human review and refactoring.
-*   **WebGL Performance & Compatibility**:
+*   **WebGL Performance &amp; Compatibility**:
     *   **Risk**: The game may not perform well or be compatible across all target browsers/devices.
     *   **Mitigation**: Profile performance regularly during development. Test builds on various platforms and browsers early in the WebGL development phase.
 *   **Beatmap Data Validation**:
