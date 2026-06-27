@@ -1,10 +1,4 @@
-<!--
-Sync Impact Report:
-- Version Change: From 0.0.0 (non-existent) to 1.0.0.
-- Principles Added: 5 new core principles covering Spec-Driven Development, Technical Architecture, Data Security, AI Collaboration, and Structured Gameplay Mechanics.
-- Sections Added: Two new sections detailing Security & Compliance and the Spec Kit Workflow & AI Integration.
-- Governance Rules Added: New rules establish the Constitution's authority, amendment process, and review requirements.
--->
+
 # Mini Game - SPU Constitution
 
 ## Core Principles
@@ -15,23 +9,23 @@ All development will be guided by formal specifications (PRD, Spec Kit artifacts
 ### II. Robust Technical Architecture
 Systems will be built with a focus on reliable synchronization and deployment. Key architectural components like the Audio-Clock Synchronizer must adhere to strict system rules (e.g., avoiding Time.time for critical timing). Deployment pipelines (e.g., Unity WebGL via Railway/Vercel) must be automated and verifiable.
 
-### III. Secure & Auditable Data
+### III. Secure &amp; Auditable Data
 All data, especially user-generated content like beatmaps and scores, must be secured and auditable. Implement robust security measures such as SHA-256 hashing for data integrity and STRIDE threat modeling to protect against common vulnerabilities. Beatmap data must conform to a strict JSON Schema.
 
 ### IV. Multi-Agent AI Collaboration
 Leverage AI agents for structured development tasks, code generation, and routing. Adhere to defined AI policies (e.g., Promptzone_config) for AI tiering, code merging, and autonomy levels, ensuring predictable and controllable AI-assisted development.
 
-### V. Structured Gameplay Mechanics & Assets
+### V. Structured Gameplay Mechanics &amp; Assets
 Gameplay mechanics and character abilities will be defined using clear, systemic data structures (e.g., C# Data Structures, ICharacterAbility interface). Animations will be triggered via defined controllers. Visual assets and effects must be well-defined and integrated systematically.
 
-## Security & Compliance
+## Security &amp; Compliance
 
 - Adherence to the defined Beatmap JSON Schema is mandatory for all level data.
 - All data transmissions for leaderboards and scores must pass through SHA-256 hashing and student ID verification to prevent tampering.
 - Code merging will follow "Hash-Anchored Edits" with clear conflict resolution strategies.
 - AI autonomy levels will be strictly managed as per Promptzone_config, with core logic requiring student review and confirmation.
 
-## Spec Kit Workflow & AI Integration
+## Spec Kit Workflow &amp; AI Integration
 
 - The project will utilize the Spec Kit workflow, with CONSTITUTION.md, SPECIFICATION.md, PLAN.md, TASKS.md, and IMPLEMENTATION.md being central artifacts.
 - AI agents (Orchestrator, VFX/UI Worker) will be used to break down tasks from specifications and generate boilerplate code/assets, which will then be reviewed and refined by human developers.
@@ -47,13 +41,7 @@ Gameplay mechanics and character abilities will be defined using clear, systemic
 
 **Version:** 1.0.0 | **Ratified:** 2026-06-27 | **Last Amended:** 2026-06-27
 ``````html
-<!--
-Sync Impact Report:
--  Version Change: From 0.0.0 (non-existent) to 1.0.0.
-- Principles Added: 5 new core principles covering Spec-Driven Development, Technical Architecture, Data Security, AI Collaboration, and Structured Gameplay Mechanics
-- Sections Added: Two new sections detailing Security & Compliance and the Spec Kit Workflow & AI Integration
-- Governance Rules Added: New rules establish the Constitution's authority, amendment process, and review requirements
--->
+
 
 # Mini Game - SPU Project Constitution
 
@@ -69,7 +57,7 @@ All development will be guided by formal specifications (PRD, Spec Kit artifacts
 
 Systems will be built with a focus on reliable synchronization and deployment. Key architectural components like the Audio-Clock Synchronizer must adhere to strict system rules (e.g., avoiding `Time.time` for critical timing). Deployment pipelines (e.g., Unity WebGL via Railway/Vercel) must be automated and verifiable.
 
-## III. Secure & Auditable Data
+## III. Secure &amp; Auditable Data
 
 All data, especially user-generated content like beatmaps and scores, must be secured and auditable. Implement robust security measures such as SHA-256 hashing for data integrity and STRIDE threat modeling to protect against common vulnerabilities. Beatmap data must conform to a strict JSON Schema.
 
@@ -77,18 +65,18 @@ All data, especially user-generated content like beatmaps and scores, must be se
 
 Leverage AI agents for structured development tasks, code generation, and routing. Adhere to defined AI policies (e.g., `Promptzone_config`) for AI tiering, code merging, and autonomy levels, ensuring predictable and controllable AI-assisted development.
 
-## V. Structured Gameplay Mechanics & Assets
+## V. Structured Gameplay Mechanics &amp; Assets
 
 Gameplay mechanics and character abilities will be defined using clear, systemic data structures (e.g., C# Data Structures, `ICharacterAbility` interface). Animations will be triggered via defined controllers. Visual assets and effects must be well-defined and integrated systematically.
 
-## Security & Compliance
+## Security &amp; Compliance
 
 - Adherence to the defined Beatmap JSON Schema is mandatory for all level data.
 - All data transmissions for leaderboards and scores must pass through SHA-256 hashing and student ID verification to prevent tampering.
 - Code merging will follow "Hash-Anchored Edits" with clear conflict resolution strategies.
 - AI autonomy levels will be strictly managed as per `Promptzone_config`, with core logic requiring student review and confirmation.
 
-## Spec Kit Workflow & AI Integration
+## Spec Kit Workflow &amp; AI Integration
 
 - The project will utilize the Spec Kit workflow, with `CONSTITUTION.md`, `SPECIFICATION.md`, `PLAN.md`, `TASKS.md`, and `IMPLEMENTATION.md` being central artifacts.
 - AI agents (Orchestrator, VFX/UI Worker) will be used to break down tasks from specifications and generate boilerplate code/assets, which will then be reviewed and refined by human developers.
